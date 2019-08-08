@@ -1,0 +1,30 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+    <view class="myMine">
+        <image src="../images/juxing.png"></image>
+    </view>
+    <view class="getInfoMessage">
+        <image src="{{headImg}}"></image>
+
+        <view class="InfoUser">{{name}}</view>
+    </view>
+
+    <view class="mine_main">
+        <view class="main-item" bindtap="getReplenishment">
+            <image src="../images/recond.png" class="item-icon"></image>
+            <view>补货记录</view>
+            <image src='../images/right.png' class='revampRightImg'></image>
+        </view>
+
+        <!-- 修改密码  -->
+        <view class="main-item" bindtap="revamp">
+            <image src="../images/5.png" class="item-icon"></image>
+            <view>修改个人信息</view>
+            <image src='../images/right.png' class='revampRightImg'></image>
+        </view>
+        <view class="main-item" bindtap="quit">
+            <image src="../images/quit.png" class="item-icon"></image>
+            <view>退出登录</view>
+        </view>
+    </view>
+</view>

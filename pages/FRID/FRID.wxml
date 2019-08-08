@@ -1,0 +1,27 @@
+<view class="container">
+    <view class="goods-main">
+        <view class="goods-main-item" wx:for="{{goods}}" wx:key="index">
+            <image src="https://bianli.miaowbuy.com/inspector{{item.img}}"></image>
+            <view class="goods-name">{{item.name}}</view>
+            <view class="goods-num">
+                <text class="residue">剩余数量:</text>
+                {{item.num}}
+                <text></text>
+            </view>
+        </view>
+    </view>
+    <view class="handle">
+        <view class="handle_right">
+            <view class="btn" bindtap="check">盘点</view>
+            <view class="btn" bindtap="save" >保存</view>
+            <view class="btn" bindtap="quitReplenishment">退出补货</view>
+        </view>
+    </view>
+
+    <modal hidden="{{submitHidden}}" title="确认提交" confirm-text="确认" cancel-text="取消" bindcancel="cancel1"
+           bindconfirm="confirm1" no-cancel="{{nocancel}}">
+        <view class="submit-modal">
+            <input type="text" bindinput="getRemark" placeholder="请输入文本信息"/>
+        </view>
+    </modal>
+</view>

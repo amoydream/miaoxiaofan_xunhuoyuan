@@ -1,0 +1,19 @@
+<view class="container">
+    <view class="details_box">
+        <view class="details_item" wx:for="{{info}}" wx:key="index">
+            <view class="details_item_top" hidden="{{item.no==null}}">货道编号：{{item.no}}</view>
+            <view class="details_item_bottom">
+                <view class="bottom_info clearfloat">
+                    <image src="https://bianli.miaowbuy.com/inspector{{item.img}}"></image>
+                    <view class="goodsName">商品名称:{{item.name}}</view>
+                    <view class="addNum">补货数量:{{item.foo.add}}</view>
+                    <view>
+                        <text>之前数量{{item.foo.after}}</text>
+
+                        <text style="padding-left: 20rpx">现在数量{{item.foo.after+item.foo.add}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

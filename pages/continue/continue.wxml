@@ -1,0 +1,45 @@
+<view class="container">
+    <view class="counter-img">
+        <view class="counter-img-box">
+            <image src='{{counterImg}}'></image>
+        </view>
+        <view class="btn">{{typeName}}</view>
+    </view>
+    <view class="device-info">
+        <view class="device-info-title">设备参数</view>
+        <view class="device-info-li">
+            <view class="left">设备名称</view>
+            <view class="right">{{deviceInfo.nickName}}</view>
+        </view>
+        <view class="device-info-li">
+            <view class="left">设备编号</view>
+            <view class="right">{{deviceInfo.no}}</view>
+        </view>
+        <view class="device-info-li">
+            <view class="left">地址</view>
+            <view class="right">{{deviceInfo.address}}</view>
+        </view>
+        <view class="{{status==1?'device-info-li':status==3?'device-info-li':'device-info-li opacity'}}">
+            <view class="left">设备开关</view>
+            <view class="right">
+                <view>状态：<text>{{deviceExplain}}</text></view>
+                <view class="{{status==3?'start play':'start'}}" bindtap="play">
+                    <view class="{{status==3?'play':''}}"></view>
+                </view>
+            </view>
+        </view>
+        <view  class="{{status==1?'explain':status==3?'explain':'explain opacity'}}">
+            <view>i</view>
+            <text>补货时，需要关闭该设备</text>
+        </view>
+    </view>
+    <view class="affirm tradition_affirm" wx:if="{{type===1}}">
+        <view bindtap="akeyfill" data-id="{{deviceInfo.id}}">一键补满</view>
+        <view bindtap="affirm" data-id="{{deviceInfo.id}}">自定义补货</view>
+        <view bindtap="skip" data-id="{{deviceInfo.id}}">查看货道/商品</view>
+    </view>
+    <view class="affirm frid_affirm" data-id="{{deviceInfo.id}}" wx:if="{{type===2}}">
+        <view bindtap="affirm" data-id="{{deviceInfo.id}}">开门</view>
+        <view bindtap="skip" data-id="{{deviceInfo.id}}">查看商品</view>
+    </view>
+</view>

@@ -1,0 +1,48 @@
+<!--pages/main/main.wxml-->
+<view class='container'>
+    <view class='mainMsg_top'>
+        <view class="BtnOrder">
+            <image src="../images/true.jpg" bindtap="getQR"></image>
+        </view>
+        <view class="text">扫描二维码补货</view>
+    </view>
+    <view class='mainMsg'>
+      <view class='mainMsgDetails'>
+        <view class='detailImg'>
+            <image src='../images/1.png'></image>
+        </view>
+        <view class='detailMsg'>
+          <view>机器故障</view>
+          <view>{{bad}}</view>
+        </view>
+      </view>
+      <view class='mainMsgDetails'>
+        <view class='detailImg'>
+            <image src='../images/offline.png'></image>
+        </view>
+        <view class='detailMsg'>
+          <view>离线设备</view>
+          <view>{{offline}}</view>
+        </view>
+      </view>
+      <view class='mainMsgDetails'>
+        <view class='detailImg'>
+            <image src='../images/all.png'></image>
+        </view>
+        <view class='detailMsg'>
+          <view>所有设备</view>
+          <view>{{all}}</view>
+        </view>
+      </view>
+      <view class='mainMsgDetails'>
+        <view class='detailImg'>
+            <image src='../images/4.png'></image>
+        </view>
+        <view class='detailMsg'>
+          <view>建议补货</view>
+          <view>{{needAdd}}</view>
+        </view>
+      </view>
+  </view>
+</view>
+

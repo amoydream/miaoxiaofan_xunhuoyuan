@@ -1,0 +1,145 @@
+.counter-img{
+    margin: 0 auto;
+    width: 268rpx;
+}
+.counter-img .counter-img-box{
+    padding-top: 40rpx;
+    padding-bottom: 30rpx;
+}
+.counter-img .counter-img-box image{
+    width:268rpx;
+    height:268rpx;
+}
+
+.counter-img .btn{
+    width:140rpx;
+    height:56rpx;
+    background:#595CA1;
+    border-radius:8rpx;
+    color: white;
+    font-size:26rpx;
+    text-align: center;
+    line-height: 56rpx;
+    margin: 0 auto;
+    margin-bottom: 50rpx;
+}
+
+.device-info-title{
+    height:100rpx;
+    font-size:32rpx;
+    font-family:MicrosoftYaHei;
+    color:#333333;
+    text-align: center;
+    line-height: 100rpx;
+}
+
+.device-info{
+    padding: 0 30rpx;
+}
+
+.device-info .device-info-li{
+    width: 690rpx;
+    height: 88rpx;
+    box-shadow:0 2rpx 0 0 rgba(35,24,21,0.1);
+    line-height: 88rpx;
+    position: relative;
+}
+
+.device-info .device-info-li .left{
+    font-size:28rpx;
+    color:rgba(51,51,51,1);
+    width: 164rpx;
+    float: left;
+}
+
+.device-info .device-info-li .right{
+    font-size:28rpx;
+    color:#666666;
+    float: left;
+}
+
+
+
+.right .start{
+    position: absolute;
+    width: 90rpx;
+    height: 44rpx;
+    right: 30rpx;
+    top: 30rpx;
+    background:#595CA1;
+    border-radius:22rpx;
+}
+
+.right .start>view{
+    width: 43rpx;
+    height: 43rpx;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1px;
+}
+
+.right .start.play{
+    background: #F2F1F1;
+}
+
+.right .start>view.play{
+    background: #C4C1C2;
+    left: 0;
+}
+
+.explain{
+    display: flex;
+    height: 60rpx;
+    align-items: center;
+}
+
+.explain view{
+    width:34rpx;
+    height:34rpx;
+    background:rgba(249,96,110,1);
+    border-radius:50%;
+    color: white;
+    text-align: center;
+    font-size: 24rpx;
+    margin-right: 10rpx;
+}
+
+.explain text{
+    font-size:26rpx;
+    color:rgba(153,153,153,1);
+}
+
+.affirm{
+    position: fixed;
+    bottom: 0;
+    width: 750rpx;
+    height: 88rpx;
+    text-align: center;
+    line-height: 88rpx;
+    color: white;
+    font-size: 32rpx;
+    display: flex;
+}
+.tradition_affirm>view{
+    flex: 1;
+}
+
+.tradition_affirm view:nth-child(1){
+    background: #5AA9E8;
+}
+
+.tradition_affirm view:nth-child(2){
+    background: #D4A660;
+}
+
+
+.tradition_affirm view:nth-child(3){
+    background: #595CA1;
+}
+
+.opacity{
+    opacity: 0.4;
+}

@@ -1,0 +1,38 @@
+page{
+    background: #f2f2f2;
+}
+.details_box{
+    height:100%;
+    overflow: scroll;
+}
+
+.details_item{
+    width: 690rpx;
+    /*height: 200rpx;*/
+    background: white;
+    padding:0 20rpx;
+    box-sizing: border-box;
+    margin: 20rpx auto;
+    border-radius: 12rpx;
+    font-size: 26rpx;
+}
+
+.details_item .details_item_top{
+    border-bottom: 1px solid #e8e8e8;
+    line-height: 60rpx;
+}
+.details_item  .details_item_bottom .bottom_info{
+    padding: 20rpx;
+}
+
+.details_item  .details_item_bottom image{
+    width: 100rpx;
+    height: 100rpx;
+    float: left;
+    vertical-align: middle;
+    margin-right: 20rpx;
+}
+
+.details_item  .details_item_bottom .bottom_info>view{
+    margin: 10rpx 20rpx;
+}

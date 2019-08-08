@@ -1,0 +1,53 @@
+<!--pages/sellgoods/sellgoods.wxml-->
+<view class="container">
+    <view class="head">
+        <view wx:for="{{deviceClass}}" wx:key="{{index}}" class="{{deviceClassIndex==index?'active':''}}"
+              bindtap="chooseDeviceClass" data-index="{{index}}">{{item}}</view>
+    </view>
+
+    <view class="deviceStatus" wx:if="{{deviceClassIndex==0}}">
+        <scroll-view scroll-x="true" scroll-into-view="{{left}}" upper-threshold='upper'>
+            <view class="item-content" wx:for="{{list}}" wx:key="index" bindtap='sellGoodsIndex' id="item{{index}}">
+                <view class="title" data-index='{{index}}' class="{{changeRed == index ? 'sellgoodsOptionsAll' : ''}}" data-id="{{item.id}}">
+                    {{item.text}}({{item.number}})
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+
+    <view class="deviceStructure" wx:if="{{deviceClassIndex==1}}">
+        <view class="title">
+            <view wx:for="{{titleArr}}" bindtap="chooseIndex" data-index="{{index}}"
+                  class="{{titleIndex==index?'active':'' }}" wx:key="{{index}}">{{item}}</view>
+        </view>
+
+    </view>
+    <!--主体-->
+    <scroll-view class='main' scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+        <view class="mainBottom_refresh" hidden="{{refresh1}}">刷新中...</view>
+        <view class="main-item" wx:for="{{deviceList}}" wx:key="{{index}}">
+            <view class="main-item-title" bindtap="skip"  data-id="{{item.id}}">
+                <text class="">{{item.nickName}}</text>
+                <image src="../images/right.png"></image>
+            </view>
+            <view class="main-item-box">
+                <view class="main-item-box-left">
+                    <view>编号：{{item.no}}</view>
+                    <view>位置：{{item.address}}</view>
+                </view>
+                <view class="main-item-box-right">
+                    <view wx:if="{{item.structureId==1}}">数量：
+                        <text>{{item.foo.goodsNowNum}}</text>
+                        /{{item.foo.goodsAllNum}}
+                    </view>
+                    <view wx:if="{{item.structureId==2}}">剩余数量：
+                        <text>{{item.foo.num==null?'0':item.foo.num}}</text>
+                    </view>
+                    <view>类型：{{item.structureId!==1?'RFID':'传统电机'}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="mainBottom_loadMore" hidden="{{load1}}">{{two1}}</view>
+    </scroll-view>
+
+</view>

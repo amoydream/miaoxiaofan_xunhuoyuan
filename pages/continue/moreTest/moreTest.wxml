@@ -1,0 +1,11 @@
+<view class="container">
+    <view class="test_main">
+        <view class="main_item active">01</view>
+        <view class="main_item">02 <text>!</text></view>
+    </view>
+    <view class="footer_btn">
+        <view>全货道测试</view>
+        <view>货道测试</view>
+        <view>货道恢复</view>
+    </view>
+</view>

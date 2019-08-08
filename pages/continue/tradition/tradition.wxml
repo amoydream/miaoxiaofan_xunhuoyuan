@@ -1,0 +1,64 @@
+<view class="container">
+    <view class="title">
+        <view class="{{titleIndex==index?'active':''}}" wx:for="{{titleArr}}" wx:key="{{index}}" data-index="{{index}}"
+              bindtap="chooseIndex">{{item}}
+        </view>
+    </view>
+    <!--货道-->
+    <scroll-view class="aisle-main" scroll-y="true" scroll-into-view="{{toView}}" wx:if="{{titleIndex==0}}">
+        <!--左边-->
+        <view class="aisle-main-left">
+            <view class="{{tierIndex==index?'aisle-main-left-item active':'aisle-main-left-item'}}"
+                  wx:for="{{tierNumber}}" wx:key="{{index}}" bindtap="chooseTier" data-content="{{item.name}}"
+                  data-index="{{index}}">
+                <text>{{item.name}}</text>
+                <view wx:if="{{item.status==0}}">i</view>
+            </view>
+        </view>
+        <!--右边-->
+        <view class="aisle-main-right">
+            <view class="aisle-main-right-item">
+                <view class="aisle-main-right-item-title">{{tierList.floor}}</view>
+                <view class="aisle-main-right-item-list" wx:for="{{tierList.channelList}}" wx:key="{{index}}">
+                    <image src="{{ip}}{{item.foo.goods.img}}"></image>
+                    <view class="list-goods">
+                        <view class="list-goods-name">{{item.foo.goods.name}}</view>
+                        <view class="list-channel">
+                            <text>货道编号：{{item.realNo}}</text>
+                            <view>数量：
+                                <text>{{item.num}}/{{item.maxNum}}</text>
+                            </view>
+                        </view>
+                        <view class="channel-btn" wx:if="{{item.status!==1}}">
+                            <view bindtap="test"
+                                  data-id="{{item.id}}">测试
+                            </view>
+                            <view bindtap="enableChannel"
+                                  data-id="{{item.id}}">启用
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="noGoods" wx:if="{{tierList.channelList.length===0}}">暂无商品</view>
+            </view>
+        </view>
+    </scroll-view>
+    <!--商品-->
+    <view class="goods-main" wx:if="{{titleIndex==1}}">
+        <view class="goods-main-item" wx:for="{{goodsList}}" wx:key="{{index}}">
+            <image src="{{ip}}{{item.img}}"></image>
+            <view class="goods-main-info">
+                <view>{{item.name}}</view>
+                <view>￥{{item.price}}</view>
+            </view>
+            <view class="goods-number">
+                数量 :
+                <text>{{item.foo.num}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="btn">
+        <view bindtap="akeyfill">一键补满</view>
+        <view bindtap="affirm">自定义补货</view>
+    </view>
+</view>

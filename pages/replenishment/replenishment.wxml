@@ -1,0 +1,48 @@
+<script src="../addOrder/addOrder.js"></script>
+<view class="container">
+    <view class="head">
+        <view class="search">
+            <input type="text" placeholder="请输入设备名称" bindconfirm="search"/>
+            <view bindtap="chooseTime">选择时间</view>
+        </view>
+    </view>
+    <scroll-view class='mainBottom' scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+        <view class="mainBottom_refresh" hidden="{{refresh}}">刷新中...</view>
+    <view class="replenishment_item clearfloat" wx:for="{{record}}" wx:key="index" >
+        <view class="item-title">
+            <image src="../images/order1.png" class="order"></image>
+            <text>{{item.no}}</text>
+            <image src="../images/deviceDetails.png" class="deviceDetails"  bindtap="look" data-index="{{item.id}}" data-devicetype="{{item.device.structureId}}"></image>
+        </view>
+        <view class="item_bottom">
+            <view class="item_name">
+               <view>设备名称</view>
+                <view>{{item.foo.device.nickName}}</view>
+            </view>
+            <view class="item_name">
+                <view>机器编号</view>
+                <view>{{item.foo.device.no}}</view>
+            </view>
+        </view>
+        <view class="item_time">补货时间：{{item.createTime}}</view>
+    </view>
+        <view class="mainBottom_loadMore" hidden="{{load}}">{{drop}}</view>
+    </scroll-view>
+
+    <modal hidden="{{hidden}}" title="选择时间" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+        <view class="section">
+            <picker mode="date" value="{{time}}"  bindchange="bindStartTimeChange">
+                <view class="picker">
+                    开始时间 : {{startTime}}
+                </view>
+            </picker>
+        </view>
+        <view class="section">
+            <picker mode="date" value="{{time}}"  bindchange="bindSendTimeChange">
+                <view class="picker">
+                    结束时间 : {{endTime}}
+                </view>
+            </picker>
+        </view>
+    </modal>
+</view>

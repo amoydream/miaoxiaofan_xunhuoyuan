@@ -1,0 +1,94 @@
+.container{
+    height: 100%;
+}
+.goods-main{
+    height: calc(100% - 100rpx);
+    overflow: scroll;
+}
+.goods-main-item{
+    height: 190rpx;
+    box-shadow:0 2rpx 0 0 rgba(35,24,21,0.1);
+    display: flex;
+    align-items: center;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.goods-main-item image{
+    width:130rpx;
+    height:130rpx;
+    background:rgba(208,207,207,1);
+}
+
+.goods-main-item .goods-name{
+    font-size:28rpx;
+    color:rgba(51,51,51,1);
+    padding:0 30rpx;
+    width: 375rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.goods-main-item .goods-num{
+    font-size: 26rpx;
+    color: #6093F9;
+    width: 220rpx;
+    text-align: right;
+
+}
+
+.goods-main-item .goods-num .residue{
+    color: #999999;
+}
+
+.handle{
+    width:750rpx;
+    height:100rpx;
+    background:rgba(255,255,255,1);
+    box-shadow:0 -2rpx 0 0 rgba(35,24,21,0.06);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.handle_right{
+    color: #ffffff;
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 30rpx;
+    width: 100%;
+    display: flex;
+}
+
+.handle_right>view{
+    flex: 1;
+}
+
+.handle_right>view:nth-child(1){
+    background: #F99A60;
+}
+
+.handle_right>view:nth-child(2){
+    background: #6093F9;
+}
+
+.handle_right>view:nth-child(3){
+    background: #F64E56;
+}
+
+/*确认提交*/
+.submit-modal{
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    box-shadow:0 2rpx 0 0 rgba(51,51,51,1);
+}
+
+.submit-modal input{
+    width: 100%;
+    font-size: 28rpx;
+    /*border-bottom: 2rpx solid #333333;*/
+}

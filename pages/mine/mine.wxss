@@ -1,0 +1,77 @@
+/* pages/mine/mine.wxss */
+.container{
+    height: 100%;
+    width: 100%;
+}
+.myMine{
+    width: 100%;
+    height: 300rpx;
+    position: relative;
+}
+.myMine image{
+    width: 100%;
+    height: 244rpx;
+}
+.getInfoMessage{
+    width: 220rpx;
+    position: absolute;
+    top: 100rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.getInfoMessage image{
+    width:150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+}
+.InfoPhoneNumber{
+    display: flex;
+    /*width: 300rpx;*/
+}
+.InfoPhoneNumber image{
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.mine_main{
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.mine_main>.main-item{
+    display: flex;
+    align-items: center;
+    height: 100rpx;
+    box-shadow:0 1px 0 0 rgba(213,213,213,1);
+    justify-content: space-between;
+}
+.mine_main>view .item-icon{
+    width: 44rpx;
+    height: 44rpx;
+}
+
+.mine_main>view>view{
+    font-size: 32rpx;
+    flex: 2;
+    padding-left: 20rpx;
+    line-height: 100rpx;
+}
+
+.mine_main>view .revampRightImg{
+    width: 37rpx;
+    height: 37rpx;
+}
+
+/*  退出登录 */
+
+.LogOut{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: white;
+    font-size: 30rpx;
+    margin-top: 20rpx;
+    text-align: center;
+    box-sizing: border-box;
+}

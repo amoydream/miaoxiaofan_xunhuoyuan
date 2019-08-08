@@ -1,0 +1,16 @@
+<!--logs.wxml-->
+<view class="container">
+    <view class="head">
+        巡货员平台
+    </view>
+ <view class="itemView">
+  <input type="text" name="userName" placeholder="请输入用户名" bindblur="userNameInput" bindinput="userNameInput"  />
+ </view>
+    <view class="itemView">
+   <input type="password" name="password" placeholder="请输入密码" bindblur="userPasswordInput" bindinput="userPasswordInput" />
+  </view>
+
+  <view class="viewLogin" style="background-color:#fbf9fe">
+    <button class="loginBtn" style="background: {{color}}" bindtap="loginBtnClick">登录</button>
+  </view>
+</view>
